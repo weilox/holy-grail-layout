@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+::selection {
+    background-color: gold;
+}
+
+nav {
+    height: 90px;
+    background-color: #222;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a:nth-child(1) {
+    margin-right: auto;
+    margin-left: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+nav a span, .active {
+    color: gold;
+}
+
+nav a:nth-child(2) {
+    margin-right: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+
+nav a:nth-child(2):hover {
+    transform: scale(1.1);
+}
+
+/* N A V I G A T I O N  B A R  F I N I S H E D */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 20px;
+}
+
+main h1 {
+    color: #333;
+}
+
+main h2{
+    color: #333;
+    font-size: 28px;
+    grid-column: span 3;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 50px 0px 50px 0px;
+}
+
+aside:nth-child(2) h2, .title{
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.image {
+    height: 400px;
+    background-image: url('./images/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+article p {
+    color: #333;
+    padding: 50px 0px 0px 0px;
+    letter-spacing: 1.4px;
+    line-height: 25px;
+}
+
+footer {
+    margin-top: 80px;
+    height: 90px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+footer h2 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+aside h2 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+aside a {
+    color: #333;
+}
+
+aside ion-icon {
+    color: black;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+aside:nth-child(2) div {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 15px;
+    transition: .3s;
+}
+
+aside:nth-child(2) div:hover {
+    background-color: #ccc;
+}
+
+aside h4 {
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+aside p {
+    color: #333;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.aside-container {
+    margin-left: 18%;
+    margin-bottom: 40px;
+}
+
+.title2 {
+    margin-left: 18%;
+    font-size: 25px;
+}
+
+
+@media (max-width:1120px) {
+    aside:nth-child(2) {
+        grid-column: span 3;
+        margin-bottom: 60px;
+    }
+
+    article {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width:986px) {
+    aside:nth-child(4) {
+        grid-column: span 3;
+        margin-left: 25%;
+    }
+
+    article {
+        grid-column: span 3;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:450px) {
+    aside:nth-child(4) {
+        margin-left: 10%;
+    }
+}
